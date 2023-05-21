@@ -125,17 +125,17 @@ func (s *Server) bindGroup(group *RouterGroup) error {
 			return err
 		}
 
-		queue, err := ch.QueueDeclare(
-			group.queueParams.Name,
-			group.queueParams.Durable,
-			group.queueParams.AutoDelete,
-			group.queueParams.Exclusive,
-			group.queueParams.NoWait,
-			group.queueParams.Args,
-		)
-		if err != nil {
-			return err
-		}
+		// queue, err := ch.QueueDeclare(
+		// 	group.queueParams.Name,
+		// 	group.queueParams.Durable,
+		// 	group.queueParams.AutoDelete,
+		// 	group.queueParams.Exclusive,
+		// 	group.queueParams.NoWait,
+		// 	group.queueParams.Args,
+		// )
+		// if err != nil {
+		// 	return err
+		// }
 
 		err = ch.Qos(group.qos.PrefetchCount, group.qos.PrefetchSize, false)
 		if err != nil {
