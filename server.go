@@ -147,7 +147,7 @@ func (s *Server) bindGroup(group *RouterGroup) error {
 // 			if err != nil {
 // 				return err
 // 			}
-		}
+//		}
 	}
 
 	return nil
