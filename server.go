@@ -142,11 +142,11 @@ func (s *Server) bindGroup(group *RouterGroup) error {
 			return err
 		}
 
-		for _, bindingKey := range group.bindings {
-			err = ch.QueueBind(queue.Name, bindingKey, group.exchangeParams.Name, false, nil)
-			if err != nil {
-				return err
-			}
+// 		for _, bindingKey := range group.bindings {
+// 			err = ch.QueueBind(queue.Name, bindingKey, group.exchangeParams.Name, false, nil)
+// 			if err != nil {
+// 				return err
+// 			}
 		}
 	}
 
